@@ -5,19 +5,17 @@ import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Footer from './components/Footer';
 
-function App() {
-  return(
-    <div>
-      <Header/>
-      <main>
-        <About/>
-        <Education/>
-        <Skills/>
-        <Projects/>
+export default function App() {
+  return (
+    <div className="min-h-screen bg-[#fffafd] dark:bg-[#090007] text-[#16000e] dark:text-[#fffeff] font-sans transition-colors">
+      <Header />
+      <main className="max-w-[1250px] mx-auto px-6 md:px-8 py-10">
+        <About />
+        <Education />
+        <Skills />
+        <Projects />
       </main>
-      <Footer/>
+      <Footer />
     </div>
   );
 }
-
-export default App;
