@@ -3,74 +3,261 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal CV</title>
+    <title>Personal CV — Veronika Marushechko</title>
+    <link rel="icon" href="heart.png?v=1" type="image/png">
+    <link rel="shortcut icon" href="heart.png?v=1" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            -webkit-font-smoothing: antialiased;
+        }
+</style>
 </head>
 <body>
-    <header>
-        <h1>Veronika Marushechko</h1>
-        <p>Cybersecurity Student | Developer & Designer</p>
-        <p>Location: Ukraine | Lviv</p>
-        <p>Email: <a href="mailto:veronikamykb@gmail.com">veronikamykb@gmail.com</a></p>
-        <p> <a href="https://github.com/yoonniks" target="_blank">GitHub</a> | <a href="https://www.behance.net/veronikaniksi-i" target="_blank">Behance</a></p>
+
+    <header class="header-container">
+        <nav>
+            <span class="nav-brand">Veronika M.</span>
+            
+            <input type="checkbox" id="burger-toggle" class="burger-toggle">
+            <label for="burger-toggle" class="burger-btn" aria-label="Toggle Navigation">
+                <i class="fa-solid fa-bars icon-bars"></i>
+                <i class="fa-solid fa-xmark icon-xmark"></i>
+            </label>
+
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#activities">Activities</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <main>
-        <section>
-            <h2>About me</h2>
-            <p>Cybersecurity student. Alongside my major, I study web development, software fundamentals, and design (UI/UX and graphic). Currently taking my first practical steps in development, gradually learning to work with both code and visuals.</p>
-        </section>
-
-        <section>
-            <h2>Education</h2>
-            <article>
-                <h3>Lviv Polytechnic National University</h3>
-                <p>Bachelor in Cybersecurity | 2025 – 2029 (In progress)</p>
-            </article>
-
-            <article>
-                <h3>St. John Bosco Youth Training Center</h3>
-                <p>Software Developer (Skilled Worker qualification) | 2023 – 2025</p>
-            </article>
-
-            <article>
-                <h3>Design Courses (GoIT)</h3>
-                <p>Graphic & UI/UX Design | 2022 – 2023</p>
-            </article>
-        </section>
-
-        <section>
-            <h2>Skills</h2>
-            <ul>
-                <li>Web Development: HTML5, CSS3, JavaScript, TypeScript, PHP</li>
-                <li>Languages and Frameworks: Python (Basic), C# (Beginner), React, React Native, Django</li>
-                <li>Mobile Development: Cross-platform mobile app development (React Native)</li>
-                <li>Design and Tools: Figma, Adobe Photoshop, Adobe Illustrator, UI/UX Design, Logo Design, Brand Identity</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Projects</h2>
-
-            <article>
-                <h3>Mental Health Support Mobile App (Diploma Project)</h3>
-                <p>
-                Designed and developed a mobile application focused on supporting users' emotional well-being and mental health.
+    <main class="main-content">
+        <section id="hero" class="hero-section">
+            <div class="photo-wrapper">
+                <img src="ava.png" alt="Avatar" class="profile-photo">
+                <span class="sticker-tag">Open to collaboration</span>
+            </div>
+            <div class="hero-info">
+                <h1 style="letter-spacing: -0.02em;">Veronika Marushechko</h1>
+                <p class="subtitle">Cybersecurity Student | Developer & Designer</p>
+                <p class="location">
+                    <span><i class="fa-solid fa-location-dot"></i> Ukraine | Lviv</span>
+                    <span class="dot-sep">•</span>
+                    <span><i class="fa-solid fa-language"></i> English: A2</span>
                 </p>
-                <p>Technologies: React Native, JavaScript, TypeScript</p>
-            </article>
+                <p class="hero-bio">Passionate about software architecture, secure development, UI/UX design, and continuous professional growth.</p>
+                <div class="contacts-wrapper">
+                    <a href="mailto:veronikamykb@gmail.com" class="btn-pill"><i class="fa-regular fa-envelope"></i> Email Me</a>
+                    <a href="https://github.com/yoonniks" target="_blank" class="btn-pill btn-outline"><i class="devicon-github-original"></i> GitHub</a>
+                    <a href="https://www.behance.net/veronikaniksi-i" target="_blank" class="btn-pill btn-outline"><i class="fa-brands fa-behance"></i> Behance</a>
+                </div>
+            </div>
+        </section>
 
-            <article>
-                <h3>Logo & Brand Identity for nextVibe Startup</h3>
-                <p>
-                Created the complete brand visual identity, including concept development, logo design, typography selection, and branding assets.
-                </p>
-                <p>Tools: Figma, Adobe Illustrator</p>
-            </article>
+        <section id="about">
+            <h2 class="title-about">About me</h2>
+            <p class="about-text">Cybersecurity student passionate about software engineering, system architecture, and UI/UX design. I bridge technical security standards with creative, user-centered development. Beyond code, I'm a communicative team player with strong leadership and conflict-resolution skills — highly detail-oriented, adaptable, and always eager to learn and grow through constructive feedback.</p>
+        </section>
+
+        <section id="education">
+            <h2 class="title-edu">Education</h2>
+            <div class="grid-container">
+                <article class="card">
+                    <span class="card-badge">2025 – 2029</span>
+                    <h3>Lviv Polytechnic National University</h3>
+                    <p>Bachelor in Cybersecurity (In progress)</p>
+                </article>
+
+                <article class="card">
+                    <span class="card-badge">2023 – 2025</span>
+                    <h3>St. John Bosco Youth Training Center</h3>
+                    <p>Software Developer (Skilled Worker qualification)</p>
+                </article>
+
+                <article class="card">
+                    <span class="card-badge">2022 – 2023</span>
+                    <h3>Design Courses (GoIT)</h3>
+                    <p>Graphic & UI/UX Design</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2 class="title-skills">Skills & Expertise</h2>
+            
+            <div class="skills-row-2col">
+                <div class="category-block">
+                    <h3><i class="fa-solid fa-mobile-screen-button"></i> Mobile & Backend</h3>
+                    <div class="skills-grid">
+                        <div class="skill-card"><i class="devicon-react-original colored"></i><span>React Native</span></div>
+                        <div class="skill-card"><i class="devicon-django-plain colored"></i><span>Django</span></div>
+                    </div>
+                </div>
+
+                <div class="category-block">
+                    <h3><i class="fa-solid fa-pen-nib"></i> Design & Tools</h3>
+                    <div class="skills-grid">
+                        <div class="skill-card"><i class="devicon-figma-plain colored"></i><span>Figma</span></div>
+                        <div class="skill-card"><i class="devicon-photoshop-plain colored"></i><span>Photoshop</span></div>
+                        <div class="skill-card"><i class="devicon-illustrator-plain colored"></i><span>Illustrator</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skills-row-2col">
+                <div class="category-block">
+                    <h3><i class="fa-solid fa-terminal"></i> Programming Languages</h3>
+                    <div class="skills-grid">
+                        <div class="skill-card"><i class="devicon-python-plain colored"></i><span>Python</span></div>
+                        <div class="skill-card"><i class="devicon-csharp-plain colored"></i><span>C#</span></div>
+                    </div>
+                </div>
+
+                <div class="category-block">
+                    <h3><i class="fa-solid fa-code"></i> Web Development</h3>
+                    <div class="skills-grid">
+                        <div class="skill-card"><i class="devicon-html5-plain colored"></i><span>HTML5</span></div>
+                        <div class="skill-card"><i class="devicon-css3-plain colored"></i><span>CSS3</span></div>
+                        <div class="skill-card"><i class="devicon-javascript-plain colored"></i><span>JavaScript</span></div>
+                        <div class="skill-card"><i class="devicon-typescript-plain colored"></i><span>TypeScript</span></div>
+                        <div class="skill-card"><i class="devicon-php-plain colored"></i><span>PHP</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-block">
+                <h3><i class="fa-solid fa-sitemap"></i> Software Architecture & Engineering</h3>
+                <div class="tags-list">
+                    <span>Software Architecture & Systems Design</span>
+                    <span>Database Architecture & Modeling</span>
+                    <span>Object-Oriented Programming (OOP)</span>
+                    <span>Software Lifecycle & Fundamentals</span>
+                </div>
+            </div>
+
+            <div class="category-block">
+                <h3><i class="fa-solid fa-shield-halved"></i> Cybersecurity & Infrastructure</h3>
+                <div class="tags-list">
+                    <span>Databases & Security</span>
+                    <span>Computer Networks & Network Protection</span>
+                    <span>Cyber Hygiene & Information Resilience</span>
+                    <span>Legal Regulations, Audits & Evidence Collection</span>
+                    <span>Fundamentals of Information & Cybersecurity</span>
+                </div>
+            </div>
+
+            <div class="category-block">
+                <h3><i class="fa-solid fa-users"></i> Soft Skills & Languages</h3>
+                <div class="tags-list soft-tags">
+                    <span><i class="fa-solid fa-globe"></i> English: A2 (Pre-Intermediate)</span>
+                    <span><i class="fa-solid fa-check"></i> Teamwork & Collaboration</span>
+                    <span><i class="fa-solid fa-check"></i> Leadership Skills</span>
+                    <span><i class="fa-solid fa-check"></i> Conflict Resolution</span>
+                    <span><i class="fa-solid fa-check"></i> Attention to Detail</span>
+                    <span><i class="fa-solid fa-check"></i> Fast Learner</span>
+                    <span><i class="fa-solid fa-check"></i> Open to Constructive Feedback</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2 class="title-projects">Projects</h2>
+            <div class="grid-container">
+                <article class="card">
+                    <h3>Mental Health Support Mobile App</h3>
+                    <p>Designed and developed a mobile application focused on supporting users' emotional well-being and mental health.</p>
+                    <div class="tech-tags">
+                        <span>React Native</span>
+                        <span>JavaScript</span>
+                        <span>TypeScript</span>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <h3>Logo & Brand Identity for nextVibe Startup</h3>
+                    <p>Created the complete brand visual identity, including concept development, logo design, typography selection, and branding assets.</p>
+                    <div class="tech-tags">
+                        <span>Figma</span>
+                        <span>Illustrator</span>
+                        <span>Branding</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="activities">
+            <h2 class="title-act">Courses & Extracurriculars</h2>
+            <div class="grid-container">
+                <article class="card">
+                    <span class="card-badge">2026</span>
+                    <h3>PolyTECH EDU</h3>
+                    <p>Selected among the <strong>Top 100 participants</strong> for the final program in Kyiv.</p>
+                </article>
+
+                <article class="card">
+                    <span class="card-badge">04.2025</span>
+                    <h3>Student Experience Exchange (Poland)</h3>
+                    <p>International exchange program focused on sharing academic and practical experience among students.</p>
+                </article>
+
+                <article class="card">
+                    <span class="card-badge">2025</span>
+                    <h3>Youth Resilience in Wartime</h3>
+                    <p>Program on entrepreneurship and startups for Ukraine's recovery and development.</p>
+                </article>
+
+                <article class="card">
+                    <span class="card-badge">07.2024 (1 week)</span>
+                    <h3>Educational Exchange (Germany)</h3>
+                    <p>One-week educational exchange trip through St. John Bosco Youth Training Center.</p>
+                </article>
+
+                <article class="card">
+                    <span class="card-badge">Volunteering</span>
+                    <h3>Dog Shelter Volunteering</h3>
+                    <p>Active support, assistance, and care for animals at the local shelter.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2 class="title-contact">Contact Me</h2>
+            <div class="contact-card-wrapper">
+                <div class="note-paperclip">
+                    <i class="fa-solid fa-paperclip"></i>
+                    <span>Let's connect!</span>
+                </div>
+                <form class="contact-form" action="#" method="post">
+                    <div class="form-group">
+                        <label for="username">Name</label>
+                        <input type="text" id="username" name="username" placeholder="Your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="useremail">Email</label>
+                        <input type="email" id="useremail" name="useremail" placeholder="your.email@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="usermessage">Message</label>
+                        <textarea id="usermessage" name="usermessage" rows="4" placeholder="Your message..." required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message <i class="fa-solid fa-paper-plane"></i></button>
+                </form>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 All rights reserved</p>
+        <div class="footer-content">
+            <p>&copy; 2026 Veronika Marushechko. All rights reserved.</p>
+        </div>
     </footer>
+
 </body>
 </html>
