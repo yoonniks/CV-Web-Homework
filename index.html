@@ -234,21 +234,13 @@
                     <i class="fa-solid fa-paperclip"></i>
                     <span>Let's connect!</span>
                 </div>
-                <form class="contact-form" action="#" method="post">
-                    <div class="form-group">
-                        <label for="username">Name</label>
-                        <input type="text" id="username" name="username" placeholder="Your name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="useremail">Email</label>
-                        <input type="email" id="useremail" name="useremail" placeholder="your.email@example.com" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="usermessage">Message</label>
-                        <textarea id="usermessage" name="usermessage" rows="4" placeholder="Your message..." required></textarea>
-                    </div>
-                    <button type="submit" class="submit-btn">Send Message <i class="fa-solid fa-paper-plane"></i></button>
-                </form>
+                <div class="card" style="text-align: center; padding: 2.5rem 1.5rem;">
+                    <h3>Get in touch with me</h3>
+                    <p style="margin: 0.8rem 0 1.5rem; color: var(--text-muted);">Click the button below or select "Contact" in the navigation menu to open the feedback form.</p>
+                    <button id="open-contact-modal-btn" class="submit-btn" type="button">
+                        Send Message <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </div>
             </div>
         </section>
     </main>
@@ -258,6 +250,9 @@
             <p>&copy; 2026 Veronika Marushechko. All rights reserved.</p>
         </div>
     </footer>
+    
+    <script src="config.js"></script>
+    <script src="script.js"></script>
 
 </body>
 </html>

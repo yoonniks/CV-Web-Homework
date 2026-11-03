@@ -1,7 +1,7 @@
-export default function Header() {
+export default function Header({ onOpenContact, theme, onToggleTheme }) {
   return (
     <header className="sticky top-0 z-50 flex justify-center items-center py-4 px-8 bg-[#fdd8f4]/15 dark:bg-[#1b0014]/40 backdrop-blur-xl border-b border-[#ff66cc]/17 dark:border-white/10">
-      <nav className="w-full max-w-[1250px] flex justify-between md:justify-center items-center relative">
+      <nav className="w-full max-w-[900px] flex justify-between md:justify-center items-center relative">
         <span className="md:hidden font-bold text-lg text-[#eb96cd]">
           Veronika M.
         </span>
@@ -31,9 +31,9 @@ export default function Header() {
           -left-8 -right-8 md:left-auto md:right-auto 
           bg-[#fff3fa]/90 dark:bg-[#090007]/90 md:bg-transparent md:dark:bg-transparent 
           backdrop-blur-2xl md:backdrop-blur-none 
-          p-8 md:p-0 gap-6 md:gap-14 
+          p-8 md:p-0 gap-6 md:gap-10 
           border-b md:border-b-0 border-[#ff66cc]/17 dark:border-white/10 
-          shadow-xl md:shadow-none text-center z-50 list-none
+          shadow-xl md:shadow-none text-center items-center z-50 list-none
         ">
           <li>
             <a href="#about" className="font-semibold text-[0.95rem] hover:text-[#eb96cd] transition">
@@ -61,9 +61,23 @@ export default function Header() {
             </a>
           </li>
           <li>
-            <a href="#contact" className="font-semibold text-[0.95rem] hover:text-[#eb96cd] transition">
+            <a href="#contact" onClick={onOpenContact} className="font-semibold text-[0.95rem] hover:text-[#eb96cd] transition">
               Contact
             </a>
+          </li>
+          <li>
+            <button
+              type="button"
+              onClick={onToggleTheme}
+              title="Переключити тему"
+              className="w-8 h-8 rounded-full border border-[#ff66cc]/25 dark:border-white/15 flex items-center justify-center text-sm transition hover:border-[#eb96cd] cursor-pointer"
+            >
+              {theme === 'dark' ? (
+                <i className="fa-solid fa-sun text-[#f59e0b]"></i>
+              ) : (
+                <i className="fa-solid fa-moon text-[#eb96cd]"></i>
+              )}
+            </button>
           </li>
         </ul>
       </nav>
